@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="header">
+    <h1>Sinodi per data</h1>
+    <div>Dal 1950 al 2050</div>
+    <input
+      type="date"
+      name="date"
+      [(ngModel)]="dt"
+      placeholder="yyyy-MM-dd"
+      min="1950-01-01"
+      max="2050-01-01"
+      required
+      (change)="onDataInputChange()"
+      />
+  </div>
+  <div id="sinodi">
+    <table>
+      <thead>
+        <tr>
+          <th>Pianeta</th>
+          <th>D1</th>
+          <th>R2</th>
+          <th>R3</th>
+          <th>D4</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let nomeElCeleste of elCelestiOrdine">
+          <th>{{nomeElCeleste}}</th>
+          <td>{{elCelesti[nomeElCeleste].sinodo[0]}}</td>
+          <td>{{elCelesti[nomeElCeleste].sinodo[1]}}</td>
+          <td>{{elCelesti[nomeElCeleste].sinodo[2]}}</td>
+          <td>{{elCelesti[nomeElCeleste].sinodo[3]}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div>
+    N.B.: Gli orari sono in utc, quindi GMT+0.
+  </div>
+</div>

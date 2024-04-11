@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+.container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+}
+.container .header {
+  padding: 50px 0 40px;
+}
+.container .header input {
+  font-size: 18px;
+}
+.container table {
+  text-align: center;
+}
+.container table td {
+  padding: 5px 10px;
+}
+
+/*# sourceMappingURL=styles.css.map*/
